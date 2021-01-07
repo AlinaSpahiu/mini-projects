@@ -1,49 +1,52 @@
 
 import React, { Component } from "react";
-import DogImage from "./components/dogImage"
-import { Row, Col, Container } from "react-bootstrap"
-import $ from 'jquery'
+// import DogImage from "./components/dogImage"
+
+// import $ from 'jquery'
+import GetDataAjax from "./components/GetDataAjax"
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dogImages: [],
-      users: [],
-      value: '',
-      result: { email: '', id: '', name: '', phone: '', username: '' }
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     dogImages: [],
+  //     users: [],
+  //     value: '',
+  //     result: { email: '', id: '', name: '', phone: '', username: '' }
+  //   }
+  // }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-    // fetch("https://dog.ceo/api/breeds/image/random/3")
-    //   .then(res => res.json())
-    //   .then((data) => {
-    //     this.setState({ dogImages: data.message })
-    //     console.log("dogs", data)
-    //   })
+  // fetch("https://dog.ceo/api/breeds/image/random/3")
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     this.setState({ dogImages: data.message })
+  //     console.log("dogs", data)
+  //   })
 
-    //https://jsonplaceholder.typicode.com/users
+  //https://jsonplaceholder.typicode.com/users
 
-    $.ajax("https://jsonplaceholder.typicode.com/users",
-      {
+  //   $.ajax("https://jsonplaceholder.typicode.com/users",
+  //     {
 
-        success: (res) => this.setState({ users: res })
-      })
+  //       success: (res) => this.setState({ users: res })
+  //     })
 
 
-  }
+  // }
 
   render() {
 
-    const dogList = this.state.dogImages.map((image) => {
-      return <DogImage url={image} />
-    })
-    const { email, id, name, phone, username } = this.state.result
+    // const dogList = this.state.dogImages.map((image) => {
+    //   return <DogImage url={image} />
+    // })
+    // const { email, id, name, phone, username } = this.state.result
     return (
       <>
-        <Container>
+
+        <GetDataAjax />
+        {/* <Container>
           <h1>Search result</h1> <br /><br />
           <div>Email : {email}</div><br /><br />
           <div>ID : {id}</div><br /><br />
@@ -51,13 +54,15 @@ class App extends Component {
           <div>Name :  {name}</div><br /><br />
           <div>Phone : {phone}</div><br /><br />
           Email: <input type="email" onChange={(e) => { this.setState({ value: e.target.value }) }} /> <br /><br />
-          {/* Name <input type="text"
+          */}
+
+        {/* Name <input type="text"
             onChange={(e) => this.state.posts.filter((post) => { return  })} 
           />
 */}
-          <button onClick={() => { this.setState({ result: this.state.users.find(user => user.email === this.state.value) }) }}>Search</button>
+        {/* <button onClick={() => { this.setState({ result: this.state.users.find(user => user.email === this.state.value) }) }}>Search</button>
 
-        </Container>
+        </Container> */}
       </>
     );
   }
