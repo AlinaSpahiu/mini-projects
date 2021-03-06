@@ -3,7 +3,7 @@ console.log("notDestructed, getting users and nums: ", importedUsers)
 console.log("notDestructed, getting just users: ", importedUsers.users)
 console.log("notDestructed, getting just nums: ", importedUsers.nums)
 
-console.log("--------------------")
+console.log("--------------------");
 
 // destructuring:
 const { users, nums } = require("./users");
