@@ -3,6 +3,7 @@ const users = [
         "id": "1",
         "name": "Alina",
         "surname": "spahiu",
+        "city":"Tirana"
     },
 
     {
