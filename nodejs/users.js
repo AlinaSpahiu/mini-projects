@@ -11,7 +11,6 @@ const users = [
         "surname": "Abbaz",
         "city": "Tunis"
     },
-    
     {
         "id": "3",
         "name": "Mesud",
