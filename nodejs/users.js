@@ -10,6 +10,7 @@ const users = [
         "id": "2",
         "name": "Hasan",
         "surname": "Abbaz",
+        "city": "Tunis"
     },
     
         {
