@@ -5,7 +5,6 @@ const users = [
         "surname": "spahiu",
         "city":"Tirana"
     },
-
     {
         "id": "2",
         "name": "Hasan",
